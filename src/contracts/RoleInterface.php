@@ -6,7 +6,7 @@
  * Time: 下午 12:30
  */
 
-namespace Wang\Rabc\Contracts;
+namespace Rabc\Contracts;
 
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;

@@ -1,8 +1,8 @@
 <?php
-namespace Wang\Rabc;
+namespace Rabc;
 
 use Illuminate\Support\ServiceProvider;
-use Wang\Rabc\Command\Migration;
+use Rabc\Command\Migration;
 
 class RabcServiceProvider extends ServiceProvider {
     

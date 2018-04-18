@@ -6,11 +6,11 @@
  * Time: 下午 3:52
  */
 
-namespace Wang\Rabc\Command;
+namespace Rabc\Command;
 
 
 use Illuminate\Console\Command;
-use Wang\Rabc\RabcServiceProvider;
+use Rabc\RabcServiceProvider;
 class Migration extends Command
 {
     protected $signature = "rabc:install";
@@ -25,8 +25,8 @@ class Migration extends Command
         // Wang\Rabc\RabcServiceProvider::class not work
         // \Wang\Rabc\RabcServiceProvider::class
         $this->call('vendor:publish', ['--provider' => RabcServiceProvider::class]);
-        // $this->info('migrate tables');
-        // $this->call('migrate',['--path'=>$migratePath]);
-        // $this->info('sucess installed');
+        $this->info('migrate tables');
+        $this->call('migrate',['--path'=>$migratePath]);
+        $this->info('sucess installed');
     }
 }

@@ -6,10 +6,10 @@
  * Time: 下午 2:14
  */
 
-namespace Wang\Rabc;
+namespace Rabc;
 
 
-use Wang\Rabc\Contracts\PermissionInterface;
+use Rabc\Contracts\PermissionInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 

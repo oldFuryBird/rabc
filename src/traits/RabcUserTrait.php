@@ -5,9 +5,9 @@
  * Date: 2018/4/18 0018
  * Time: 下午 4:01
  */
-namespace Wang\Rabc\Traits;
+namespace Rabc\Traits;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-Use Wang\Rabc\Role;
+Use Rabc\Role;
 
 trait RabcUserTrait
 {

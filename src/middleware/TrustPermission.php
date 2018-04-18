@@ -1,17 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/18 0018
- * Time: 下午 5:06
- */
 
-namespace Wang\Rabc\Middleware;
+
+namespace Rabc\Middleware;
+
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
-
-class TrustRole
+class TrustPermission
 {
+
     protected $auth;
     const DELIMITER ='|';
     public function __construct(Guard $auth)
@@ -25,13 +21,13 @@ class TrustRole
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next,$roles)
+    public function handle($request, Closure $next, $permissions)
     {
-        if (!is_array($roles)){
-            $roles = explode(self::DELIMITER, $roles);
+        if(!is_array($permissions)){
+            $permissions = explode(self::DELIMITER);
         }
-        if($this->auth->guest() || !$request->user()->hasRole($roles)){
-            abort(403,'access denied!');
+        if($this->auth->guest() || !$request->user()->can($permissions)){
+            abort(403);
         }
         return $next($request);
     }
