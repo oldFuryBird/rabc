@@ -1,5 +1,5 @@
 {
-  "name":"wang/rabc-for-laravel",
+  "name":"oldfurybird/rabc",
   "description":" role based permission control",
   "keywords": ["laravel","illuminate","auth","roles","acl","permission"],
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "autoload":{
     "psr-4":{
-      "wang\\Rabc\\":"src/"
+      "Wang\\Rabc\\":"src/"
     }
   },
   "require-dev": {
