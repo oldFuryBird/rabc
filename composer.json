@@ -1,0 +1,24 @@
+{
+  "name":"wang/rabc-for-laravel",
+  "description":" role based permission control",
+  "keywords": ["laravel","illuminate","auth","roles","acl","permission"],
+  "license": "MIT",
+  "require":{
+    "php": ">=5.5.0",
+    "illuminate/console": "~5.0",
+    "illuminate/support": "~5.0",
+    "illuminate/cache": "~5.0"
+  },
+  "autoload":{
+    "psr-4":{
+      "wang\\Rabc\\":"src/"
+    }
+  },
+  "require-dev": {
+
+    "phpunit/phpunit": "~5.7.14|~6.1",
+    "laravel/framework": "~5.6.0"
+
+  }
+
+}
